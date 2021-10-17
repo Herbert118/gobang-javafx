@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"  xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="bigTitleBox">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <JFXButton onAction="#logOut" text="注销" />
+                    </children>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="管理员菜单" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <ImageView fx:id="titleImg" pickOnBounds="true" preserveRatio="true" />
+            </children>
+            <padding>
+                <Insets top="135.0" />
+            </padding>
+        </HBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+            <children>
+                <JFXButton onAction="#navToUserManageView" styleClass="mainMenuBtn" text="用户管理" />
+                <JFXButton onAction="#navToReviewManageView" styleClass="mainMenuBtn" text="棋局管理" />
+                <JFXButton onAction="#navToSystemManageView" styleClass="mainMenuBtn" text="系统管理" visible="false" />
+            </children>
+            <padding>
+                <Insets top="50.0" />
+            </padding>
+        </VBox>
+    </children>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"  xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="bigTitleBox" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="bigTitle" text="棋局记录" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" spacing="30.0" styleClass="sideMenuBox" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="stateArea" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #000000; -fx-border-width: 1 0 1 0;">
+               <children>
+                  <ImageView fx:id="stateImg" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <JFXButton onAction="#regret" styleClass="sideMenuBtn" text="悔棋" />
+            <JFXButton onAction="#save" styleClass="sideMenuBtn" text="保存" />
+            <JFXButton onAction="#config" styleClass="sideMenuBtn" text="设置" />
+            <JFXButton onAction="#restart" styleClass="sideMenuBtn" text="重新开始" />
+            <JFXButton onAction="#exit" styleClass="sideMenuBtn" text="退出" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" top="50.0" />
+         </padding></VBox>
+   </left>
+</BorderPane>

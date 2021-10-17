@@ -1,0 +1,50 @@
+
+.button{
+	-fx-text-fill:white;
+	-fx-background-color:#3B3B3B;
+	-fx-padding: 7 20 7 20;
+	-fx-font-size:20;
+}
+
+.body{
+	-fx-background-color:#ffffff;
+	-fx-padding:40 40 40 40;
+}
+
+.table-row-cell {
+    -fx-cell-size: 35;
+    -fx-font-size:14;
+}
+.table-cell{
+	-fx-alignment:CENTER;
+}
+.table-view{
+	-fx-pref-height:400;
+	-fx-max-height:400;
+}
+.label{
+	-fx-text-fill:#3B3B3B;
+	-fx-font-size:18;
+}
+
+
+.Rei{
+	-fx-pref-width:300;
+	
+}
+
+.text-field:focused{
+	-fx-border-width: 2 2 2 2;
+	-fx-border-radius: 2;
+	-fx-min-width: 100;
+	-fx-min-height: 20;
+	-fx-border-color: black;
+}
+.text-field{
+	-fx-border-width: 2 2 2 2;
+	-fx-border-radius: 2;
+	-fx-min-width: 100;
+	-fx-min-height: 20;
+	-fx-border-color: #4B4B4B;
+}
+

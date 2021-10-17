@@ -1,0 +1,160 @@
+.tree-cell{
+	-fx-text-fill: #3B3B3B;
+	-fx-font-size:16;
+	-fx-font-family:Microsoft YaHei;
+}
+.tree-cell:selected{
+	-fx-text-fill:white;
+	-fx-background:#3B3B3B;
+	/*bro , what a good luck*/
+}
+.button{
+	-fx-text-fill:white;
+	-fx-background-color:#3B3B3B;
+	-fx-padding: 7 20 7 20;
+	-fx-font-size:14;
+}
+
+
+
+.bigTitleBox{
+	-fx-background-color: #4B4B4B;
+}
+
+.bigTitleBox .label{
+	-fx-font-size: 30;
+	-fx-text-fill: #FFFFFF;
+}
+
+.titleBox .label{
+	-fx-font-size:18;
+	-fx-text-fill:#3B3B3B;
+	-fx-border-style:solid;
+	-fx-border-width: 0 0 2 0;
+	-fx-border-color:#3B3B3B;
+	-fx-padding:0 20 0 20;
+}
+
+#logOutBtn{
+	-fx-background-color:#ffffff;
+	-fx-text-fill:#3B3B3B;
+}
+
+.table-row-cell {
+    -fx-cell-size: 35;
+    -fx-font-size:14;
+}
+.table-cell{
+	-fx-alignment:CENTER;
+}
+.table-view{
+	-fx-pref-height:500;
+}
+.tree-table-cell{
+	-fx-font-size:14;
+}
+
+.label{
+	-fx-text-fill:#3B3B3B;
+	-fx-font-size:14;
+	-fx-font-family: "Microsoft YaHei UI";
+}
+
+.blackLabel{
+	-fx-text-fill:#3B3B3B;
+}
+.whiteLabel{
+	-fx-text-fill:#FFFFFF;
+}
+
+
+	
+#nameLb{
+	-fx-text-fill:#ffffff;
+	-fx-font-size:18;
+}
+
+.sideMenuBox{
+	-fx-border-width:0 2 0 0;
+	-fx-border-color: #3B3B3B;
+	-fx-border-style: solid;
+	-fx-background-color:#4B4B4B;
+}
+
+.sideMenuBtn{
+	-fx-background-color: #2B2B2B;
+	-fx-pref-width: 150;
+	-fx-min-height: 40;
+	-fx-font-size: 20;
+}
+
+.mainMenuBtn{
+	-fx-pref-width: 250;
+	-fx-min-height: 55;
+	-fx-font-size: 20;
+}
+
+.table-view {
+	-fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+	-fx-background-color: transparent;
+}
+.table-view .corner {
+	-fx-background-color: transparent;
+}
+.table-view .column-header-background{
+	-fx-background-color: linear-gradient(to bottom, #000000, #7B7B7B);
+	-fx-background-radius: 7px 7px 0px 0px;
+	-fx-background-insets: 0 11px 0 0;
+	-fx-padding: 0 0 0 0;
+
+}
+
+table-view .column-header {
+	-fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+	-fx-border-color: transparent;
+	-fx-padding: 2 0 2 10px;
+}
+.table-row-cell:hover {
+	-fx-text-background-color: #63B8FF;
+}
+.table-row-cell:odd{
+	-fx-background-color: #4B4B4B11;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em;
+}
+.table-row-cell:even{
+	-fx-background-color: #6B6B6B11;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+	-fx-background-color: #626262;
+	-fx-background-radius: 3px;
+}
+
+.text-field:focused{
+	-fx-border-width: 2.5 2.5 2.5 2.5;
+	-fx-border-radius: 2;
+	-fx-min-width: 100;
+	-fx-min-height: 20;
+	-fx-border-color: black;
+}
+.text-field{
+	-fx-border-width: 1 1 1 1;
+	-fx-border-radius: 2;
+	-fx-min-width: 100;
+	-fx-min-height: 20;
+	-fx-border-color: #ffffff;
+}
+
+.bottomMenuBtn{
+	-fx-min-height: 40;
+	-fx-min-width: 130;
+}
