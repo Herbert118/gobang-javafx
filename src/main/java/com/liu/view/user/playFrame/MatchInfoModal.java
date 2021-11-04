@@ -74,8 +74,9 @@ public class MatchInfoModal {
         if(check(blackPlayer,whitePlayer)){
             infoArr[0] = blackPlayer;
             infoArr[1] = whitePlayer;
-            modal.close();
+
         }
+        modal.close();
 
     }
 
@@ -90,7 +91,7 @@ public class MatchInfoModal {
             result = false;
             text += "白方棋手信息";
         }
-        if(result == false){
+        if(!result){
             text += "有误";
             warnText.setText(text);
         }

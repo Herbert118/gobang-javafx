@@ -75,7 +75,7 @@ public class PlayFrameController {
     void save(ActionEvent event) {
         Save save = new Save(boardViewController.getStepList(),false,
                 LocalDateTime.now(), user.getId(),blackPlayer,whitePlayer,null);
-        if(service.addSave(user.getId(), save)){
+        if(service.addSave(user.getId(), service.saveClone(save))){//clone to make sure it is different object
             Alert.showAlert("保存成功!");
         }
     }

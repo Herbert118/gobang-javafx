@@ -15,6 +15,9 @@ public class CheckUtil {
         if(name == null){
             return false;
         }
+        if(name.matches("^\\s*$")){
+            return false;
+        }
         else{
             return true;
         }

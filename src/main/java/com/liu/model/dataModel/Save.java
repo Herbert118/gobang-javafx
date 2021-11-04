@@ -1,6 +1,6 @@
 package com.liu.model.dataModel;
 
-import java.io.Serializable;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -72,6 +72,7 @@ public class Save implements Serializable {
         this.whitePlayer = whitePlayer;
         this.winner = winner;
     }
+
 
     public String getWinner() {
         return winner;

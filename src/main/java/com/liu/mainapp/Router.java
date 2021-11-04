@@ -106,9 +106,6 @@ public class Router {
 
     }
     public void navToGameView(Save save) {
-
-
-
         BoardView board = new BoardView(45);
         BoardViewController controllerB = new BoardViewController(board);
         //加载fxml文件和相应的控制器
@@ -118,15 +115,16 @@ public class Router {
         loader.setLocation(url);
         PlayFrameController controllerP = new PlayFrameController(controllerB,user,save.getBlackPlayer(),save.getWhitePlayer());
         //TODO:add choice
-        loader.setController(controllerP);
-        controllerB.loadSave(save);
+
         //loadSavehere
         BorderPane playFrame = null;
         try {
+            loader.setController(controllerP);
             playFrame = loader.load();
             playFrame.setRight(null);
             playFrame.setBottom(null);
             playFrame.setCenter(board);
+            controllerB.loadSave(save);
         } catch (IOException e) {
             e.printStackTrace();
         }

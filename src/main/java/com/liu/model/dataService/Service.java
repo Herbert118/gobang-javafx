@@ -148,4 +148,8 @@ public class Service {
         }
         return resultList;
     }
+
+    public Save saveClone(Save save){
+        return db.saveClone(save);
+    }
 }

@@ -7,7 +7,7 @@ import com.liu.util.ObjectInputUtil;
 import com.liu.util.ObjectOutputUtil;
 import com.liu.view.component.Alert;
 
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -123,17 +123,15 @@ public class Db {
         for(User user: userList){
             if(user.getName().contains(info)){
                 resultList.add(user);
-                break;
             }
-            if (user.getEmail().contains(info)){
+            else if (user.getEmail().contains(info)){
                 resultList.add(user);
             }
-            if (user.getId().contains(info)){
+            else if (user.getId().contains(info)){
                 resultList.add(user);
             }
         }
-
-        return userList;
+        return resultList;
     }
     //TODO: finish this
     private boolean updateUser(){
@@ -195,17 +193,16 @@ public class Db {
             throw new IllegalArgumentException("user is not in map!");
         }
             for(Save review: reviews){
-                if(review.getTime().toString().contains(info)&&review.isFinished() == true){
-                    resultList.add(review);
-                }
-                else if((review.getUserId().contains(info))){
-                    resultList.add(review);
-                }
-                else if(review.getWhitePlayer().contains(info)){
-                    resultList.add(review);
-                }
-                else if(review.getBlackPlayer().contains(info)){
-                    resultList.add(review);
+                if(review.isFinished()) {
+                    if (review.getTime().toString().contains(info)) {
+                        resultList.add(review);
+                    } else if ((review.getUserId().contains(info))) {
+                        resultList.add(review);
+                    } else if (review.getWhitePlayer().contains(info)) {
+                        resultList.add(review);
+                    } else if (review.getBlackPlayer().contains(info)) {
+                        resultList.add(review);
+                    }
                 }
             }
         return resultList;
@@ -234,4 +231,22 @@ public class Db {
         }
         return resultList;
     }
+    public Save saveClone(Save save){
+        Save saveC = null;
+        try { // 将该对象序列化成流,因为写在流里的是对象的一个拷贝，而原对象仍然存在于JVM里面。所以利用这个特性可以实现对象的深拷贝
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(baos);
+            oos.writeObject(save);// 将流序列化成对象
+            ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(bais);
+            saveC = (Save) ois.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return saveC;
+    }
+
+
 }
